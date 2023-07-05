@@ -1,0 +1,71 @@
+﻿@using CashManagement.Domain.Interface;
+@using CashManagement.Domain.Model;
+@using CashManagement.Domain;
+@inject IUserService _userService;
+@inject IRoleService _roleService;
+@inject IDialogService DialogService;
+@inject SKLAuthenticator _authenticator;
+
+<MudDialog>
+    <TitleContent>
+        <MudText Typo="Typo.h6">
+            <MudIcon Icon="@Icons.Material.Filled.DeleteForever" Class="mr-3 mb-n1" />
+            @Title
+        </MudText>
+    </TitleContent>
+    <DialogContent>
+        <MudTextField @bind-Value="Model.Name" Label="姓名" />
+        <MudTextField @bind-Value="Model.Account" Label="帳號" />
+        <MudTextField @bind-Value="Model.ViewPassword" Label="密碼" />
+        <MudSelect @bind-Value="Model.RoleID" Label="身分別">
+            @foreach (RoleModel item in RoleList)
+            {
+                <MudSelectItem Value="@(item.ID)">@item.Name</MudSelectItem>
+            }
+        </MudSelect>
+    </DialogContent>
+    <DialogActions>
+        <MudButton OnClick="Cancel">取消</MudButton>
+        <MudButton Color="Color.Error" OnClick="Save">儲存</MudButton>
+    </DialogActions>
+</MudDialog>
+
+@code {
+    [CascadingParameter] MudDialogInstance MudDialog { get; set; }
+
+    [Parameter]
+    public string Title { get; set; }
+
+    [Parameter]
+    public UserModel Model { get; set; }
+
+    IEnumerable<RoleModel> RoleList { get; set; } = new List<RoleModel>();
+    Guid RoleID { get; set; }
+    protected override async Task OnInitializedAsync()
+    {
+        RoleList = new List<RoleModel> { new RoleModel { ID = Guid.Empty, Name = "未選擇" } }.Concat(_roleService.GetAll());
+    }
+
+    /// <summary>
+    /// 取消
+    /// </summary>
+    private void Cancel()
+    {
+        MudDialog.Cancel();
+    }
+    /// <summary>
+    /// 修改
+    /// </summary>
+    private async Task Save()
+    {
+        try
+        {
+        _userService.InsertOrUpdate(Model);
+        MudDialog.Close(DialogResult.Ok(""));
+        }
+        catch (Exception ex)
+        {
+            bool? result = await DialogService.ShowMessageBox("發生錯誤", ex.Message, "確認");
+        }
+    }
+}

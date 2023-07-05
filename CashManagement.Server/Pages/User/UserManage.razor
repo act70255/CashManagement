@@ -1,0 +1,99 @@
+﻿@page "/UserManage"
+
+@using CashManagement.Domain.Interface;
+@using CashManagement.Domain.Model;
+@using CashManagement.Domain;
+@using CashManagement.Utility.Extension;
+@using System.Windows.Input;
+
+@inject IUserService _userService
+@inject IDialogService DialogService
+@inject SKLAuthenticator _authenticator
+
+<AuthorizeView Context="authContext" Roles="Admin,SuperAdmin">
+    <NotAuthorized>
+        沒有權限阿
+        <MudButton Color="Color.Primary" Variant="Variant.Filled" @onclick="Login">登入</MudButton>
+    </NotAuthorized>
+    <Authorized>
+        <PageTitle>用戶管理</PageTitle>
+        <MudText Typo="Typo.h3" GutterBottom="true">用戶管理</MudText>
+        <MudStack>
+            <MudItem>
+                <MudButton Color="Color.Primary" Variant="Variant.Filled" @onclick="RefreshDataGrid">查詢</MudButton>
+                <MudButton Color="Color.Primary" Variant="Variant.Filled" @onclick="Insert">新增</MudButton>
+            </MudItem>
+            <MudDataGrid T="UserModel" Items="@UserList" SortMode=SortMode.Multiple>
+                <Columns>
+                    <PropertyColumn Property="x => x.Name" Title="User" />
+                    <PropertyColumn Property="x => x.Account" Title="account" />
+                    <PropertyColumn Property="x => x.RoleName" />
+                    <PropertyColumn Property="x => x.Enable" />
+                    <TemplateColumn CellClass="d-flex justify-end">
+                        <CellTemplate>
+                            <MudButton Size="@Size.Small" Variant="@Variant.Filled" Color="@Color.Primary" @onclick="@((e) => InsertOrUpdate(context.Item))">修改</MudButton>
+                        </CellTemplate>
+                    </TemplateColumn>
+                </Columns>
+                <PagerContent>
+                    <MudDataGridPager T="UserModel" />
+                </PagerContent>
+            </MudDataGrid>
+        </MudStack>
+    </Authorized>
+</AuthorizeView>
+
+@code {
+    IEnumerable<UserModel> UserList = new List<UserModel>();
+
+    /// <summary>
+    /// 頁面載入時執行
+    /// </summary>
+    /// <returns></returns>
+    protected override async Task OnInitializedAsync()
+    {
+        RefreshDataGrid();
+    }
+
+    /// <summary>
+    /// 更新DataGrid資料
+    /// </summary>
+    void RefreshDataGrid()
+    {
+        UserList = _userService.GetAll().ToList();
+        StateHasChanged(); //刷新畫面
+    }
+    void Insert()
+    {
+        InsertOrUpdate(new UserModel());
+    }
+    /// <summary>
+    /// 編輯資料
+    /// </summary>
+    /// <param name="model"></param>
+    async void InsertOrUpdate(UserModel model)
+    {
+        await ShowDialog(model);
+    }
+    /// <summary>
+    /// 打開編輯彈窗
+    /// </summary>
+    /// <param name="model"></param>
+    /// <param name="mode"></param>
+    /// <returns></returns>
+    async Task ShowDialog(UserModel model)
+    {
+        var parameters = new DialogParameters { ["Model"] = model };
+        var dialog = await DialogService.ShowAsync<User_Dialog>("user", parameters);
+        var result = await dialog.Result;
+
+        if (!result.Canceled)
+        {
+            RefreshDataGrid();
+        }
+    }
+    async Task Login()
+    {
+        _authenticator.RunLoginUI();
+    }
+}

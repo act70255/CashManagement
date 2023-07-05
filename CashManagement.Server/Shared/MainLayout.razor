@@ -1,0 +1,112 @@
+﻿@using CashManagement.Domain;
+@using CashManagement.Server.Pages.Login;
+@using Microsoft.AspNetCore.Components.Authorization
+@inherits LayoutComponentBase
+@inject SKLAuthenticator _authenticator
+@inject IDialogService DialogService
+@inject IJSRuntime JSRuntime
+
+<MudThemeProvider @bind-IsDarkMode="@_isDarkMode" Theme="_theme" />
+<MudDialogProvider />
+<MudSnackbarProvider />
+
+<MudLayout>
+    <MudAppBar Elevation="0">
+        <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" Edge="Edge.Start" OnClick="@((e) => DrawerToggle())" />
+        <MudSpacer />
+        <MudIconButton Icon="@Icons.Custom.Brands.MudBlazor" Color="Color.Inherit" Link="https://mudblazor.com/" Target="_blank" />
+        <MudIconButton Icon="@Icons.Custom.Brands.GitHub" Color="Color.Inherit" Link="https://github.com/MudBlazor/MudBlazor/" Target="_blank" />
+    </MudAppBar>
+    <MudDrawer @bind-Open="_drawerOpen" Elevation="1">
+        <MudDrawerHeader>
+            <AuthorizeView>
+                <Authorized>
+                    <h3>@context.User.Identity.Name</h3>
+                    <MudButton Color="Color.Primary" Variant="Variant.Filled" @onclick="Logout">登出</MudButton>
+                </Authorized>
+                <NotAuthorized>
+                    <MudButton Color="Color.Primary" Variant="Variant.Filled" @onclick="Login">登入</MudButton>
+                </NotAuthorized>
+            </AuthorizeView>
+        </MudDrawerHeader>
+        <MudSwitch @bind-Checked="@_isDarkMode" Color="Color.Primary" Class="ma-4" T="bool" Label="Dark Mode" />
+        <NavMenu />
+    </MudDrawer>
+    <MudMainContent>
+        <MudContainer MaxWidth="MaxWidth.Large" Class="my-16 pt-16">
+            <ErrorBoundary @ref="errorBoundary">
+                <ChildContent>
+                    @Body
+                </ChildContent>
+                <ErrorContent Context="ex">
+                    @*@{
+                        OnError(@ex);
+                    }*@
+                    <p>@ex.Message</p>
+                </ErrorContent>
+            </ErrorBoundary>
+        </MudContainer>
+    </MudMainContent>
+</MudLayout>
+
+@code {
+    private ErrorBoundary errorBoundary;
+    bool _drawerOpen = true;
+    private MudTheme _theme = new();
+    private bool _isDarkMode = true;
+
+    void DrawerToggle()
+    {
+        _drawerOpen = !_drawerOpen;
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        _authenticator.OnLogin += (s, e) =>
+        {
+            Login();
+        };
+    }
+
+    async Task Login()
+    {
+
+        var parameters = new DialogParameters { ["Title"] = "登入" };
+
+        var dialog = await DialogService.ShowAsync<Login_Dialog>("Delete Server", parameters);
+        var result = await dialog.Result;
+
+        if (!result.Canceled)
+        {
+            StateHasChanged(); //刷新畫面
+        }
+    }
+
+    /// <summary>
+    /// 錯誤處理
+    /// </summary>
+    /// <param name="ex"></param>
+    /// <returns></returns>
+    async Task OnError(Exception ex)
+    {
+        //bool? result = await DialogService.ShowMessageBox("發生錯誤", ex.Message, "確認");
+        //未來還可以增加log等等
+    }
+
+    async Task Logout()
+    {
+        _authenticator.Logout();
+    }
+
+    /// <summary>
+    /// 處理Excpetion (避免提示錯誤後持續卡在錯誤畫面)
+    /// </summary>
+    protected override void OnParametersSet()
+    {
+        //說明參考 https://www.telerik.com/blogs/work-unhandled-exceptions-gracefully-blazor-server-dotnet-6-error-boundaries
+        if (errorBoundary != null)
+        {
+            errorBoundary?.Recover();
+        }
+    }
+}

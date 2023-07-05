@@ -1,0 +1,1985 @@
+﻿{
+   "CodeGenerationMode": 2,
+   "ContextClassName": "Test_BlazorContext",
+   "ContextNamespace": null,
+   "DefaultDacpacSchema": null,
+   "FilterSchemas": false,
+   "IncludeConnectionString": false,
+   "ModelNamespace": null,
+   "OutputContextPath": null,
+   "OutputPath": "",
+   "PreserveCasingWithRegex": true,
+   "ProjectRootNamespace": "CashManagement.Entity",
+   "Schemas": null,
+   "SelectedHandlebarsLanguage": 0,
+   "SelectedToBeGenerated": 0,
+   "Tables": [
+      {
+         "Name": "[dbo].['SQL Results$']",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[acct_dtl]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[acct_dtl_bank]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[acct_dtl_tmp2]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[acct_dtl_vlife]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[AML_Mapping]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Audit_bd_base]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Audit_bd_ex_rate]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Audit_bd_list]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Audit_bd_trans_hist]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Audit_ca_broker]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Audit_code_file]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Audit_fn_base]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Audit_fn_co]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Audit_fn_trans]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Audit_fund_file]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Audit_fx_account_file]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Audit_fx_base]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Audit_fx_code_File]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Audit_fx_deal_hist]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Audit_sb_broker]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Audit_sk_base]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Audit_sk_capital]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Audit_sk_hist]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Audit_sk_price]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Audit_sk_total]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Audit_sk_total_hist]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Audit_sk_trans]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Audit_td_dtl]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Audit_td_int_file]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Audit_td_mast]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[bank_account]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[bank_acct]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[bank_acct_agent]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[bank_acct_bk]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[bank_acct_limit]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[bank_acct_log]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[bank_acct_predesign]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[bank_acct_rate]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[bank_base]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[bank_base_aml_nation]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[bank_bk_endbal]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[bank_bk_endbal_fc]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[bank_disk_l]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[bank_disk_r]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[bank_endbal]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[bank_endbal_hist]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[bank_inout_dtl]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[bank_int]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[bank_temp_trans]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[bank_temp_trans_log]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[bd_base]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[bd_base_backup]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[bd_bdr002d]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[bd_bdr011]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[bd_cash]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[bd_change]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[bd_change_hist]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[bd_change_hist2023]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[bd_changefund]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[bd_chgtype]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[bd_chk_oversell]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[bd_ex_rate]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[bd_exclude_list]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[bd_int]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[bd_inv]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[bd_inv_hist]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[bd_issueco]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[bd_list]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[bd_list_bk_A03106]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[bd_newdeal]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[bd_price]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[bd_reccash]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[bd_reccash_backup]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[bd_reccash_trans]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[bd_report]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[bd_sheet_inv]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[bd_sheet_inv_hist]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[bd_sheet_trans]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[bd_sheet_trans_hist]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[bd_tanbase]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[bd_tanbase_beeline]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[bd_tmpbdr23]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[bd_total]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[bd_total_hist]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[bd_total_hist20230110]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[bd_trans]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[bd_trans_hist]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[bd_trans_hist_backup]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[bd_transtempCB]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[bdrs_account]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[bdrs_cal]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[bdrs_cal_hist]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[bdrs_fundacct]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[bdrs_inventory]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[bdrs_inventory_log]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[bdrs_relation]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[bdrs_trans]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[bdrs_trans_new]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[bdrs_trans_ref]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Book]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Book1]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Book2]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ca_broker]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ca_brokerpay]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ca_car051_memo]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ca_car051_memo_bk]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ca_cashitem]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ca_cat008_log]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ca_cat018_log]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ca_cat030_log]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ca_cat079_log]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ca_category]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ca_check_gl_dtl]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ca_group]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ca_group_car052]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ca_group_exp_amt]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ca_item_base]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ca_remit_info]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ca_restdate]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ca_source_item_mapping]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ca_unlock_log]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[car009memo]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[car020_map]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[cash_item_mapping]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[cash_plan]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[cash_status]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[CAT080_Acct]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[CAT080_Bank]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ccy_base]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ccy_rate_list]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[check_add]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[check_chgblock]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[check_detail]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[check_detail_change]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Check_detail_no]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[check_detail_voidrecovery]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Check_detail_yes]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[check_tmp_1]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[chgtype_tranhist]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[chgtypetest]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[code_base]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[code_file]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[columns_define]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[cs_total]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[cs_total_hist]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[cs_trans]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[da_acct_dtl]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[da_bank_endbal]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[da_bank_endbal_hist]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[da_contract_base]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[da_sb_dtl]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[da_sb_register]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[da_sb_total_hist]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[da_sb_trans]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[da_td_int_file]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[da_td_int_rec]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[da_td_register]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[da_td_total_hist]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[da_td_trans]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[dafn_divid]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[dafn_taxfree]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[dafn_total]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[dafn_trans]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[dask_divid]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[dask_taxfree]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[dask_total]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[dask_trans]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[daskr055_hist]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[daskr055_total]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[daskr055_total_hist]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[daskr055_trans]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[dept_base]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[disposable_bd_tanbase]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[dm_tra_fo_deal]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[dm_tra_td_pledge_chg]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[emp_base]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[f_acct]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[fas_no_tmp]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[fc_exchange_tran]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[fn_alarm]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[fn_Announce]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[fn_base]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[fn_bd_data]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[fn_bk_hold]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[fn_bk_hold_hist]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[fn_bk_hold_hist_tmp]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[fn_co]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[fn_compare_list]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[fn_dealer_etf]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[fn_dealer_fn]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[fn_divid]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[fn_divid_p]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[fn_dividinfo]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[fn_holding_CNY]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[fn_ImportLog]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[fn_inout_dtl]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[fn_invest_list]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[fn_ipo_advance]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[fn_Issuer_rating]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Fn_PaperData]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[fn_plan]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[fn_price]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[fn_report]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[fn_swap]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[fn_taxfree]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[fn_total]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[fn_total_chg_d]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[fn_total_chg_p]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[fn_total_chg_t]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[fn_total_d]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[fn_total_hist]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[fn_total_hist_d]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[fn_total_hist_p]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[fn_total_hist_t]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[fn_total_p]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[fn_total_t]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[fn_trans]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[fn_trans1]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ft_account]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ft_account_hist]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ft_account_list]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ft_base]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ft_broker]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ft_daily_margin]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ft_margin_tran]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ft_price]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ft_total]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ft_total_hist]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ft_tran]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ft_trandtl]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ftp_upload_log]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[fu_restdate]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[fund_base]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[fund_charge]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[fund_file]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[fund_portfolio]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[fund_price]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[fx_account]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[fx_account_execute]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[fx_account_file]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[fx_bank_acc]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[fx_base]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[fx_base_back]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[fx_category]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[fx_chg_security_id]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[fx_code_file]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[fx_deal]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[fx_deal_hist]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[fx_deal_hist_aa]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[fx_derivatives]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[fx_derivatives_hist]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[fx_diff_temp]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[fx_eval_info]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[fx_ExchRate]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[fx_file]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[fx_fund_file]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[fx_gl_setup]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[fx_hist]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[fx_holding]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[fx_holding_hist]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[fx_ImportLog]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[fx_int_file]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[fx_international]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[fx_mapping_tmp]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[fx_market_fair]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[fx_overdue_income]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[fx_Purchase_Transactions]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[fx_Purchase_Transactions_hist]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[fx_Sale_Transactions]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[fx_Sale_Transactions_hist]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[fx_security]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[fx_security_hist]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[fx_total]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[fx_total_delete]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[fx_total_hist]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[fx_Trade_Receivables_Payables]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[fx_Trade_Receivables_Payables_hist]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[fx_tran_delete]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[fx_trans]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[fx_transaction]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[fx_transaction_delete]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[fx_transaction_hist]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ics_cash_upload]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[il_action_info]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[il_ex_rate]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[il_ex_rate_bak]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[il_fund_base]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[il_fund_bp_rate]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[il_fund_co]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[il_fund_mng_rate]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[il_fund_price]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[il_fund_total]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[il_fund_total_adj]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[il_fund_total_hist]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[il_fund_total_tmp]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[il_fund_total_vlife]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[il_fund_trans]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[il_ILT010]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[il_pool_base]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[il_pool_map]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[inv_bnd_bal]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[inv_equ_bal]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[inv_equ_bal_dt]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[inv_fnd_bal]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[inv_fnd_bal_dt]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[level_change]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[lk_bank]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[lk_chang]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[lk_hist]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[lk_interest]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[lk_list]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[lk_total]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[lk_total_chg]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[lk_total_hist]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[lk_trans]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[lk_trans_divid_count]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[no34_chg_record]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[no34_chgtype]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[odbc_info]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[op_brokerpay]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[op_change]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[op_dtl]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[op_inv_hist]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[op_predata]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[op_rate]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[op_rate1]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[op_total]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[op_total_hist]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[op_tran]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[op_tran_bk]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[portia_code]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[prog_base]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[reserch_source]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[result]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Role]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[role_base]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[role_prog]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[rp_base]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[rp_base_cb]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[rp_cash]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[rp_int]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[rpt_daily]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[rs_identable]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[sb_billname]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[sb_broker]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[sb_broker_list]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[sb_broker_td]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[sb_dtl]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[sb_hold]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[sb_int]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[sb_mast]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[sb_rate]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[sb_register]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[sb_total_hist]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[sb_trans]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[sk_accountset]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[sk_base]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[sk_capital]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[sk_chgtype]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[sk_chgtype_p]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[sk_divid]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[sk_divid_dtl]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[sk_divid_dtl_p]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[sk_dividdate]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[sk_dividinfo]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[sk_dividpay]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[sk_hist]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[sk_id]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[sk_ifrs_trans]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[sk_inv]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[sk_inv_hist]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[sk_inv_odd]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[sk_master]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[sk_plan]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[sk_point]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[sk_price]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[sk_projectdividinfo]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[sk_report]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[sk_skr009]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[sk_skr009b]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[sk_taxfree]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[sk_total]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[sk_total_chg_d]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[sk_total_chg_p]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[sk_total_chg_t]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[sk_total_d]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[sk_total_hist]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[sk_total_hist_d]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[sk_total_hist_p]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[sk_total_hist_t]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[sk_total_ifrs9]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[sk_total_p]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[sk_total_t]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[sk_tranerr]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[sk_tranerr_memo]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[sk_tranerr_p]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[sk_trans]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[sk_trans_log]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[skr055_hist]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[skr055_total]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[skr055_total_hist]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[skr055_trans]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[sys_base]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[sys_baseBK]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[sys_calendar]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[sys_demand]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[sys_ftpconnect]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[sys_proxy]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[sys_relationship]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[system_caw_transfer]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[system_file]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[system_file_backup]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[system_File_fx]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[system_file_log]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[system_file2]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[system_log]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[system_request]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tables_define]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tas_lk_total_hist]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tas_lk_trans]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[td_bkamt]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[td_brokerpay]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[td_dtl]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[td_int_file]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[td_mast]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[td_register]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[td_report]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tmp_acdesc]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tmp_check_000]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tmp_cm_fund_dividend]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tmp_cm_fund_nav]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tmp_cm_fund_scalemper]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tmp_div1]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tmp_ets_fnd_trade]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tmp_ets_stk_trade]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tmp_fn_price]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tmp_fn_total_hist]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tmp_fn_trans]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tmp_FundData]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tmp_FundIssuer]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tmp_FundIssuerRating]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tmp_FundUnitsData]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tmp_fx_base]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tmp_lend_portia]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tmp_Portfolio]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tmp_r11]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tmp_tb]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tmp_test_id]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tmpCNY]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tmpfn_tran_0301]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tmpg1]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tmph1]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tra_bnd_baladj]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tra_bnd_deal_rating]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tra_fx_deal_acc]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[User]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[user_act_log]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[user_prog]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[user_prog_log]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[user_pwd_log]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[user_sys]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[user_sys_log]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[vl_總帳科目停用清單]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[vl_總帳調整科目對照]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[vl_bankacct_sl2]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[vl_fee_base]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[vl_gl_group]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[vl_gl_setup]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[vl_gl_trans]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[vl_maf01]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[vl_maf01_ifrs9]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[vl_maf01_len8]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[vl_maf10]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[vl_maf10_fxbackup]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[vl_maf10_upload]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[vl_mafAR]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[vl_mafAR_detail]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[vl_mafAR_detail_2016]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[vl_mafAR_Fx]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[vl_mafAR_Fx_tmp]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[wk_ets_fnd_trade]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[wk_ets_stk_trade]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[wk_FundData]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[wk_Portfolio]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[wk_sb_trans]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[wk_td_mast]",
+         "ObjectType": 0
+      }
+   ],
+   "UiHint": "itacctdb01.Test_Blazor.dbo",
+   "UncountableWords": null,
+   "UseBoolPropertiesWithoutDefaultSql": false,
+   "UseDatabaseNames": true,
+   "UseDateOnlyTimeOnly": false,
+   "UseDbContextSplitting": false,
+   "UseFluentApiOnly": true,
+   "UseHandleBars": false,
+   "UseHierarchyId": false,
+   "UseInflector": false,
+   "UseLegacyPluralizer": false,
+   "UseManyToManyEntity": false,
+   "UseNoDefaultConstructor": false,
+   "UseNoObjectFilter": false,
+   "UseNodaTime": false,
+   "UseNullableReferences": false,
+   "UseSchemaFolders": false,
+   "UseSpatial": false,
+   "UseT4": false
+}

@@ -1,0 +1,24 @@
+﻿<MudNavMenu>
+    @foreach (var obj in MenuList)
+    {
+        <MudNavLink Href="@(obj.Link)" Match="@(obj.MatchType)" Icon="@(obj.Icon)">@(obj.DisplayName)</MudNavLink>
+    }
+</MudNavMenu>
+
+@code
+{
+    List<MenuObject> MenuList;
+
+    protected override async Task OnInitializedAsync()
+    {
+        //依照資料產生Menu 未來可以把Menu存在資料庫 依照權限撈出來後只顯示符合USER條件的選單
+        MenuList = new List<MenuObject>
+        {
+            new MenuObject("Home", "", Icons.Material.Filled.Home, NavLinkMatch.Prefix),
+            new MenuObject("CCY BASE", "ccy", Icons.Material.Filled.List, NavLinkMatch.Prefix),
+            new MenuObject("使用者管理", "UserManage", Icons.Material.Filled.List, NavLinkMatch.Prefix),
+            new MenuObject("Counter", "counter", Icons.Material.Filled.Add, NavLinkMatch.Prefix),
+            new MenuObject("Fetch data", "fetchdata", Icons.Material.Filled.List, NavLinkMatch.Prefix),
+        };
+    }
+}

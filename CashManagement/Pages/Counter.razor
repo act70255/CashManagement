@@ -1,0 +1,31 @@
+﻿@page "/counter"
+
+@using CashManagement.Domain.Interface;
+@using CashManagement.Domain.Model;
+@using CashManagement.Utility.Extension;
+
+@inject IUserService userService
+
+<h1>Counter</h1>
+
+<p>Current count: @currentCount</p>
+<p>UserName: @user?.Name</p>
+<p>UserName: @user?.UserType.GetDisplayName()</p>
+
+<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+<button class="btn btn-primary" @onclick="GetUser">Get User Name</button>
+
+@code {
+    private int currentCount = 0;
+    UserModel user;
+
+    private void IncrementCount()
+    {
+        currentCount++;
+    }
+
+    private void GetUser()
+    {
+        user = userService.GetUser();
+    }
+}

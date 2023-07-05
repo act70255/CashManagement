@@ -1,0 +1,89 @@
+﻿@using CashManagement.Domain.Interface;
+@using CashManagement.Domain.Model;
+@using CashManagement.Utility.Extension;
+@using System.Windows.Input;
+
+@inject ICcyService _ccyService
+
+<MudDialog>
+    <TitleContent>
+        <MudText Typo="Typo.h6">
+            <MudIcon Icon="@Icons.Material.Filled.DeleteForever" Class="mr-3 mb-n1" />
+            @Title
+        </MudText>
+    </TitleContent>
+    <DialogContent>
+        <MudTextField @bind-Value="Model.ccy" Label="CCY" ReadOnly="@(!isInsert)" />
+        <MudTextField @bind-Value="Model.ccy_name" Label="Name" ReadOnly="@isReadonly" />
+        <MudTextField @bind-Value="Model.ccy_e_name" Label="E_NAME" ReadOnly="@isReadonly" />
+        <MudTextField @bind-Value="Model.int_base_days" Label="天數" ReadOnly="@isReadonly" />
+    </DialogContent>
+    <DialogActions>
+        <MudButton OnClick="Cancel">取消</MudButton>
+        @if (DialogMode == 1)
+        {
+            <MudButton Color="Color.Error" OnClick="Insert">新增</MudButton>
+        }
+        @if (DialogMode == 2)
+        {
+            <MudButton Color="Color.Error" OnClick="Modify">修改</MudButton>
+        }
+    </DialogActions>
+</MudDialog>
+@code {
+    [CascadingParameter] MudDialogInstance MudDialog { get; set; }
+
+    [Parameter]
+    public CcyModel Model { get; set; } = new CcyModel();
+    /// <summary>
+    /// 1:新增 2:修改
+    /// </summary>
+    [Parameter]
+    public int DialogMode
+    {
+        get
+        {
+            return _dialogMode;
+        }
+        set
+        {
+            _dialogMode = value;
+            isReadonly = !(value == 1 || value == 2);
+            isInsert = value == 1;
+            Title = value == 1 ? "新增" : "修改";
+        }
+    }
+
+    string Title { get; set; }
+    int _dialogMode;
+    bool isReadonly { get; set; }
+    bool isInsert { get; set; } = false;
+
+    protected override async Task OnInitializedAsync()
+    {
+
+    }
+    /// <summary>
+    /// 取消
+    /// </summary>
+    private void Cancel()
+    {
+        MudDialog.Cancel();
+    }
+    /// <summary>
+    /// 修改
+    /// </summary>
+    private void Modify()
+    {
+        _ccyService.Update(Model);
+        MudDialog.Close(DialogResult.Ok(""));
+    }
+    /// <summary>
+    /// 新增
+    /// </summary>
+    private void Insert()
+    {
+        _ccyService.Insert(Model);
+        MudDialog.Close(DialogResult.Ok(""));
+    }
+}

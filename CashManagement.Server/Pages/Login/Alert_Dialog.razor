@@ -1,0 +1,62 @@
+﻿@using CashManagement.Domain.Interface;
+
+@inject IUserService _userService;
+
+<MudDialog>
+    <TitleContent>
+        <MudText Typo="Typo.h6">
+            @Title
+        </MudText>
+    </TitleContent>
+    <DialogContent>
+        <MudText Typo="Typo.h6">
+            @Message
+        </MudText>
+    </DialogContent>
+    <DialogActions>
+        <MudButton OnClick="Confirm">@ConfirmText</MudButton>
+        @if (ConfirmAction != null!)
+        {
+            <MudButton OnClick="Cancel">@CancelText</MudButton>
+        }
+    </DialogActions>
+</MudDialog>
+
+@code {
+    [CascadingParameter] MudDialogInstance MudDialog { get; set; }
+
+    [Parameter]
+    public string Title { get; set; }
+    [Parameter]
+    public string Message { get; set; }
+    [Parameter]
+    public Action ConfirmAction { get; set; }
+    [Parameter]
+    public Action CancelAction { get; set; }
+    [Parameter]
+    public string ConfirmText { get; set; } = "確認";
+    [Parameter]
+    public string CancelText { get; set; } = "取消";
+    bool IsCancelVisible { get; set; } = true;
+
+    protected override async Task OnInitializedAsync()
+    {
+    }
+
+    /// <summary>
+    /// 確認
+    /// </summary>
+    void Confirm()
+    {
+        ConfirmAction?.Invoke();
+        MudDialog.Cancel();
+    }
+    /// <summary>
+    /// 取消
+    /// </summary>
+    void Cancel()
+    {
+        CancelAction?.Invoke();
+        MudDialog.Cancel();
+    }
+}
